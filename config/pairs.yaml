@@ -1,0 +1,29 @@
+# Static trading pairs to monitor
+# These are verified manually; the auto-discovery engine can add more.
+pairs:
+  - symbol: "ETH/USDT"
+    cex: binance
+    dex_chain: ethereum
+    dex_pool: "0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640"  # Uniswap V3 ETH/USDT 0.3%
+    min_spread_pct: 0.3
+
+  - symbol: "WBTC/USDT"
+    cex: binance
+    dex_chain: ethereum
+    dex_pool: "0x4585fe77225b41b697c938b018e2ac67ac5a20c0"  # Uniswap V3 WBTC/USDT 0.3%
+    min_spread_pct: 0.3
+
+  - symbol: "LINK/USDT"
+    cex: binance
+    dex_chain: ethereum
+    min_spread_pct: 0.5
+
+  - symbol: "UNI/USDT"
+    cex: binance
+    dex_chain: ethereum
+    min_spread_pct: 0.5
+
+  - symbol: "AAVE/USDT"
+    cex: binance
+    dex_chain: ethereum
+    min_spread_pct: 0.5

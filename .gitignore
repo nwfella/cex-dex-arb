@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+venv/
+venv_*/
+.venv/
+env/
+
+# Environment
+.env
+*.pem
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project data
+data/*.json
+logs/
+*.db
+*.sqlite3
+
+# Config overrides
+config/local.yaml
+
+# Dashboards
+dashboard/__pycache__/

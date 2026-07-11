@@ -1,0 +1,58 @@
+bot:
+  mode: paper              # paper | live
+  scan_interval_ms: 1000   # How often to scan for opportunities
+  max_concurrent_trades: 2
+  min_profit_threshold_usd: 5.0
+  max_position_size_usd: 1000.0
+  daily_loss_limit_usd: 100.0
+  cooldown_seconds: 60     # Wait between trades on same pair
+  log_level: INFO
+
+cex:
+  binance:
+    testnet: false
+    timeout_seconds: 30
+    rate_limit_per_second: 10
+
+dex:
+  ethereum:
+    rpc_url: ${ETH_RPC_URL}
+    chain_id: 1
+    flashbots: true
+    max_gas_price_gwei: 100
+    slippage_tolerance: 0.01  # 1%
+    max_priority_fee_gwei: 2.0
+
+  arbitrum:
+    enabled: false
+    rpc_url: ${ARB_RPC_URL}
+    chain_id: 42161
+    max_gas_price_gwei: 0.5
+    slippage_tolerance: 0.02
+
+  base:
+    enabled: false
+    rpc_url: ${BASE_RPC_URL}
+    chain_id: 8453
+    max_gas_price_gwei: 0.1
+    slippage_tolerance: 0.02
+
+pools:
+  scan_interval_seconds: 30   # How often to refresh pool liquidity data
+  min_liquidity_usd: 50000    # Minimum pool liquidity to consider
+  max_pools: 200              # Max pools to monitor
+
+risk:
+  max_drawdown_pct: 15         # Max drawdown from peak before auto-shutdown
+  min_cex_balance_usd: 50     # Min CEX balance to keep (don't trade it away)
+  max_slippage_pct: 3.0       # Abort if expected slippage exceeds this
+  concurrent_same_asset: false # Prevent 2 concurrent trades on same asset
+
+notifications:
+  telegram:
+    enabled: false
+    bot_token: ${TELEGRAM_BOT_TOKEN}
+    chat_id: ${TELEGRAM_CHAT_ID}
+  on_trade: true
+  on_error: true
+  on_opportunity: false       # Would be noisy

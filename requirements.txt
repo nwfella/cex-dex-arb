@@ -1,0 +1,31 @@
+# Core
+web3>=7.0.0
+python-binance>=1.0.19
+aiohttp>=3.9.0
+asyncio>=3.4.3
+uvloop>=0.19.0
+
+# Config
+pyyaml>=6.0
+python-dotenv>=1.0.0
+
+# Data & Persistence
+sqlalchemy>=2.0.0
+aiosqlite>=0.20.0
+pydantic>=2.0.0
+
+# Dashboard
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+jinja2>=3.1.0
+python-socketio>=5.11.0
+
+# WebSocket
+websockets>=12.0
+
+# CLI
+click>=8.1.0
+rich>=13.7.0
+
+# Flashbots
+flashbots>=1.0.0
